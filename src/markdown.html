@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- saved from url=(0014)about:internet -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=9" >
+
+<title>STATS DATASET Extension Command</title>
+
+<link rel="stylesheet" type="text/css" href="extsyntax.css" />
+
+
+
+
+
+</head>
+
+<body>
+<h1>STATS DATASET Extension Command</h1>
+
+<p>Manage open datasets.</p>
+<div class="syntax">
+<p>STATS DATASET 
+NAME=<em>dataset</em><br/>
+ACTIVATE=<em>existing dataset</em><br/>
+WINDOW=ASIS<sup>&#42;&#42;</sup> or FRONT<br/>
+CLOSE = <em>datasets</em> or ALL<br/>
+KEEP = <em>datasets</em><br/>
+DISPLAY = NO<sup>&#42;&#42;</sup> or YES</p>
+
+<p>/HELP</p>
+
+<p><sup>&#42;</sup> Required<br/>
+<sup>&#42;&#42;</sup> Default</p>
+</div>
+<p>/HELP displays this help and does nothing else.</p>
+
+This example closes all datasets except the one named <em>w</em>.</p>
+
+<pre class="example"><code>STATS DATASET CLOSE=ALL KEEP=w.
+</code></pre>
+
+<p>This assigns the name <em>a</em> to the active dataset; then
+activates dataset <em>b</em>, and finally closes
+datasets <em>c</em> and <em>d</em>.</p>
+
+<pre class="example"><code>STATS DATASET NAME=a ACTIVATE=b CLOSE=c d.
+</code></pre>
+
+<p>If no keywords are given, the command
+will do nothing.</p>
+
+<p>All of the functionality of STATS DATASET maps to built-in 
+DATASET commands, but it provides some conveniences and can 
+handle the &ldquo;almost all&rdquo; case for closing datasets.</p>
+
+<p>Note that closing a dataset does not necessarily remove
+it from the session.  The active dataset does not have
+to have a name.  However, an unnamed active dataset
+would be removed from the session if another (named)
+dataset is activated.</p>
+
+<p><strong>NAME</strong> specifies a dataset name to assign to the active dataset.</p>
+
+<p><strong>ACTIVATE</strong> specifies a dataset to be activated.
+<strong>WINDOW</strong>=ASIS or FRONT specifies the window behavior for ACTIVATE.</p>
+
+<p><strong>CLOSE</strong> specifies datasets to be closed.  It can be a list of 
+dataset names or ALL.</p>
+
+<p><strong>KEEP</strong> specifies datasets not to close whether or not
+they are listed or implied in CLOSE.  Specifying KEEP without
+CLOSE means that all datasets except the KEEP list will be
+closed.</p>
+
+<p>Any names specified that do not exist are silently ignored,
+but errors in NAME or ACTIVATE stop the command.</p>
+
+<p><strong>DISPLAY</strong> specifies whether or not to run a DATASET DISPLAY
+command.</p>
+
+<p>The steps are executed in the order that these keywords are
+listed.  That is, first NAME; then ACTIVATE/WINDOW; 
+then CLOSE/KEEP; finally DISPLAY.</p>
+
+<p>&copy; Copyright IBM Corp. 1989, 2014</p>
+
+</body>
+
+</html>
+
