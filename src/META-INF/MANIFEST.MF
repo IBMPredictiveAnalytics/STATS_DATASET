@@ -1,0 +1,17 @@
+Name: STATS DATASET
+Dialog-Specs: STATS_DATASET.spd
+Command-Specs: STATS_DATASET.xml
+Code-Files: STATS_DATASET.py
+Misc-Files: markdown.html,extsyntax.css,IBMdialogicon.png
+Summary: Combine several DATASET commands into one
+Description: This command combines the functions of DATASET NAME, DATA
+ SET ACTIVATE, DATASET CLOSE, and DATASET DISPLAY into a single comman
+ d.  It also allow you to close all the datasets except for a specifie
+ d list without having to list every dataset individually.
+Author: JKP, IBM SPSS
+Version: 1.0.3
+Product-Version: 18
+Date: 6/5/2014
+Categories: utility
+Plugins: Python
+Translation-Catalogues: lang
