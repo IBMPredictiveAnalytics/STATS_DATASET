@@ -1,11 +1,11 @@
 # STATS DATASET
 ## Combine several DATASET commands into one
- This command combines the functions of DATASET NAME, DATA
+ This command combines the functions of DATASET NAME, DATASET ACTIVATE, DATASET CLOSE, and DATASET DISPLAY into a single command.  It also allows you to close all the datasets except for a specified list without having to list every dataset individually.
 
 ---
 Requirements
 ----
-- IBM SPSS Statistics 18 or later
+- IBM SPSS Statistics 18 or later and the corresponding IBM SPSS Statistics-Integration Plug-in for Python.
 
 ---
 Installation intructions
