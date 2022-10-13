@@ -1,4 +1,5 @@
 Name: STATS DATASET
+Display-Name: Combine Datasets
 Dialog-Specs: STATS_DATASET.spd
 Command-Specs: STATS_DATASET.xml
 Code-Files: STATS_DATASET.PY
